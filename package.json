@@ -1,6 +1,6 @@
 {
   "name": "stream-json-storage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Streaming local file storage",
   "main": "dist/bundle.js",
   "scripts": {

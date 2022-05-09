@@ -33,6 +33,7 @@ class JsonStreamStorage {
   // find -> predicate(schema):bool
   find(predicate) {
     return new Promise((resolve) => {
+      let findflag = false;
       const rl = readline.createInterface({
         input: createReadStream(this.storagePath),
       });
@@ -43,12 +44,13 @@ class JsonStreamStorage {
       rl.on("line", (schemaStr) => {
         const schema = JSON.parse(schemaStr);
         if (predicate(schema)) {
+          findflag = true;
           close();
           resolve(schema);
         }
       });
-      rl.on("close", (schemaStr) => {
-        resolve(null);
+      rl.on("close", () => {
+        !findflag && resolve(null);
       });
     });
   }
@@ -101,7 +103,7 @@ class JsonStreamStorage {
   }
 }
 
-export default JsonStreamStorage
+export default JsonStreamStorage;
 
 // (async () => {
 //   console.log("===========");
