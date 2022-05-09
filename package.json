@@ -1,0 +1,21 @@
+{
+  "name": "stream-json-storage",
+  "version": "0.0.1",
+  "description": "Streaming local file storage",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
+  "keywords": [
+    "stream",
+    "json",
+    "jsonLine",
+    "storage"
+  ],
+  "author": "xiguan00yu",
+  "license": "MIT",
+  "repository": "xiguan00yu/stream-json-storage",
+  "devDependencies": {
+    "rollup": "^2.72.1"
+  }
+}
