@@ -1,12 +1,14 @@
 {
   "name": "stream-json-storage",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Streaming local file storage",
   "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup --config rollup.config.js"
   },
   "keywords": [
+    "DB",
+    "nodejs",
     "stream",
     "json",
     "jsonLine",
